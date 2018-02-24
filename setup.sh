@@ -54,7 +54,7 @@ install_vim() {
     # downloads vundle plugin manager for vim
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null 2>&1
     # fetch uploaded .vimrc
-    git clone https://github.com/nobodyme/linux-automated-setup/.vimrc.git ~/.vimrc > /dev/null 2>&1
+    cp .vimrc ~/.vimrc
     # install all plugins
     vim +PluginInstall +qall
     # vim plugins requirements
