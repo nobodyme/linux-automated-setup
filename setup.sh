@@ -86,6 +86,26 @@ install_chromedriverselenium() {
     chmod 0755 /usr/local/bin/selenium-server-standalone.jar
 }
 
+install_mactheme() {
+    # source - http://www.linuxandubuntu.com/home/macbuntu-transform-ubuntu-1604-to-mac-os-x
+    add-apt-repository ppa:noobslab/macbuntu
+    apt-get update
+    apt-get install macbuntu-os-icons-lts-v7
+    apt-get install macbuntu-os-ithemes-lts-v7
+    # mac type launcher
+    # apt-get install slingscold
+    apt-get install plank
+    apt-get install macbuntu-os-plank-theme-lts-v7
+    # changing desktop name 
+    cd && wget -O Mac.po http://drive.noobslab.com/data/Mac/change-name-on-panel/mac.po
+    cd /usr/share/locale/en/LC_MESSAGES;
+    sudo msgfmt -o unity.mo ~/Mac.po;rm ~/Mac.po;cd
+    # changing side bar icon
+    wget -O launcher_bfb.png http://drive.noobslab.com/data/Mac/launcher-logo/apple/launcher_bfb.png
+    mv /usr/share/unity/icons/launcher_bfb.png /usr/share/unity/icons/launcher_bfb_ubuntu.png
+    sudo mv launcher_bfb.png /usr/share/unity/icons/ 
+}
+
 install_all() {
     install_googlechrome
     install_sublime
@@ -95,6 +115,7 @@ install_all() {
     install_fontrendering
     install_chromedriverselenium
     install_c++
+    install_mactheme
 }
 
 install_minimal() {   
@@ -116,6 +137,7 @@ for i in "$@"
         -java) install_java;;
         -python) install_python;;
         -better-font) install_fontrendering;;
+        -mac-theme) install_mactheme;;
         -chromedriverselenium) install_chromedriverselenium;;
         -all) install_all;;
         *) echo "wrong argument" exit 1;;
