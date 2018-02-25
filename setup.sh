@@ -64,7 +64,7 @@ install_vim() {
     ./install.py --all
 }
 
-install_c++() {
+install_cplus() {
     apt-get install -y g++
     # for C++ to work
     apt-get install -y libc6-dev
@@ -132,7 +132,7 @@ for i in "$@"
         -chrome) install_googlechrome;; 
         -git) install_git;;
         -sublime) install_sublime;;
-        -c++) install_c++;;
+        -c++) install_cplus;;
         -vim) install_vim;;
         -java) install_java;;
         -python) install_python;;
