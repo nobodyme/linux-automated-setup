@@ -22,7 +22,7 @@ install_fontrendering() {
     chmod a+w /etc/profile.d/infinality-settings.sh
 
     # search for USE_STYLE in the below file to set it
-    gedit /etc/profile.d/infinality-settings.sh
+    xdg-open /etc/profile.d/infinality-settings.sh
 }
 
 install_java() {
@@ -99,11 +99,11 @@ install_mactheme() {
     # changing desktop name 
     cd && wget -O Mac.po http://drive.noobslab.com/data/Mac/change-name-on-panel/mac.po
     cd /usr/share/locale/en/LC_MESSAGES;
-    sudo msgfmt -o unity.mo ~/Mac.po;rm ~/Mac.po;cd
+    msgfmt -o unity.mo ~/Mac.po;rm ~/Mac.po;cd
     # changing side bar icon
     wget -O launcher_bfb.png http://drive.noobslab.com/data/Mac/launcher-logo/apple/launcher_bfb.png
     mv /usr/share/unity/icons/launcher_bfb.png /usr/share/unity/icons/launcher_bfb_ubuntu.png
-    sudo mv launcher_bfb.png /usr/share/unity/icons/ 
+    mv launcher_bfb.png /usr/share/unity/icons/ 
 }
 
 install_all() {
@@ -112,10 +112,10 @@ install_all() {
     install_git
     install_vim
     install_java
-    install_fontrendering
     install_chromedriverselenium
     install_c++
     install_mactheme
+    install_fontrendering
 }
 
 install_minimal() {   
