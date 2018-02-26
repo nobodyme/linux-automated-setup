@@ -113,7 +113,7 @@ install_all() {
     install_vim
     install_java
     install_chromedriverselenium
-    install_c++
+    install_cplus
     install_mactheme
     install_fontrendering
 }
@@ -122,7 +122,7 @@ install_minimal() {
     install_git
     install_sublime
     install_python
-    install_c++
+    install_cplus
 }
 
 for i in "$@"
