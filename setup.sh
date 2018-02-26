@@ -88,14 +88,14 @@ install_chromedriverselenium() {
 
 install_mactheme() {
     # source - http://www.linuxandubuntu.com/home/macbuntu-transform-ubuntu-1604-to-mac-os-x
-    add-apt-repository ppa:noobslab/macbuntu
+    add-apt-repository -y ppa:noobslab/macbuntu
     apt-get update
-    apt-get install macbuntu-os-icons-lts-v7
-    apt-get install macbuntu-os-ithemes-lts-v7
+    apt-get install -y macbuntu-os-icons-lts-v7
+    apt-get install -y macbuntu-os-ithemes-lts-v7
     # mac type launcher
     # apt-get install slingscold
-    apt-get install plank
-    apt-get install macbuntu-os-plank-theme-lts-v7
+    apt-get install -y plank
+    apt-get install -y macbuntu-os-plank-theme-lts-v7
     # changing desktop name 
     cd && wget -O Mac.po http://drive.noobslab.com/data/Mac/change-name-on-panel/mac.po
     cd /usr/share/locale/en/LC_MESSAGES;
