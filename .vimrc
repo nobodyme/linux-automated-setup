@@ -15,13 +15,27 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
 set wildignore+=*.swp,.lock,.DS_Store,._*
 
 " lightline-vim neccessary config
- set laststatus=2
+set laststatus=2
 
 "set mouse active
- set mouse=a
+set mouse=a
+
+" confirm if user wants to save a file instead of error
+set confirm
+
+" command window height to 2 lines
+set cmdheight=2
+
+set autoindent
+
+" use case insensitive search, except when using capital letters
+set ignorecase
+set smartcase
 
 " show line numbers
 set number
+
+set background=dark
 
 " highlight cursor/current line
 set cursorline
@@ -50,6 +64,11 @@ Plugin 'scrooloose/nerdtree'      " file viewer                  [ctrl+N]
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	" set shortcut to open nerdtree
 	map <C-n> :NERDTreeToggle<CR>
+	" autodelete buffer of file deleted in NERDTree
+	let NERDTreeAutoDeleteBuffer = 1
+	" experiment
+	let NERDTreeMinimalUI = 1
+	let NERDTreeDirArrows = 1
 
 Plugin 'haya14busa/incsearch.vim' " search highlighting 
 	" set shortcut for inc-search
@@ -71,13 +90,24 @@ Plugin 'ryanoasis/vim-devicons'   " for better nerdtree icons
 
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' "colors for nerd tree icons
 
-Plugin 'Xuyuanp/nerdtree-git-plugin' "git indication in nerdtree
+Plugin 'Xuyuanp/nerdtree-git-plugin' " git indication in nerdtree
 
+Plugin 'airblade/vim-gitgutter' " additions deletion indication of git close to line number
+
+Plugin 'sheerun/vim-polyglot' " syntax highlighting
+
+Plugin 'vim-python/python-syntax' " additional syntax specifically for python
+	let g:python_highlight_all = 1
+
+Plugin 'Sirver/ultiships' " adds common snippets integrates with YCM
+	let g:UltiSnipsExpandTrigger = "<tab>"
+	let g:UltiSnipsJumpForwardTrigger = "<tab>"
+	let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 call vundle#end()
 
 "sets colorscheme
-colorscheme 256-grayvim
+colorscheme hybrid
 
 filetype plugin indent on
 
