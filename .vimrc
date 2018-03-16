@@ -17,8 +17,8 @@ set wildignore+=*.swp,.lock,.DS_Store,._*
 " lightline-vim neccessary config
 set laststatus=2
 
-"set mouse active
-set mouse=a
+" set mouse active
+" set mouse=a
 
 " confirm if user wants to save a file instead of error
 set confirm
@@ -39,6 +39,9 @@ set background=dark
 
 " highlight cursor/current line
 set cursorline
+
+" spell check on for specific file types
+au FileType markdown,text setlocal spell spelllang=en
 
 " run time path for vundle to handle plug-ins
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -110,6 +113,3 @@ call vundle#end()
 colorscheme hybrid
 
 filetype plugin indent on
-
-
-
