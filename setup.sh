@@ -39,7 +39,8 @@ install_sublime() {
 install_python() {
     # Might wanna look at this as well for future tasks https://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu
     apt install -y virtualenv
-    apt install-y python3-pip
+    apt install -y python3-pip
+    apt install -y python-pip
     # useful for vim plugins as well
     apt-get install -y build-essential cmake
     apt-get install -y python3-dev

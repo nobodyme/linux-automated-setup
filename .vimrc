@@ -47,7 +47,7 @@ au FileType markdown,text setlocal spell spelllang=en
 set rtp+=~/.vim/bundle/Vundle.vim/
 
 " script to switch between color schemes F8(next) shift+F8(previous) alt+F8(random)
-source ~/.vim/setcolors.vim
+" source ~/.vim/setcolors.vim
 
 call vundle#begin()
 
@@ -102,10 +102,10 @@ Plugin 'sheerun/vim-polyglot' " syntax highlighting
 Plugin 'vim-python/python-syntax' " additional syntax specifically for python
 	let g:python_highlight_all = 1
 
-Plugin 'Sirver/ultiships' " adds common snippets integrates with YCM
-	let g:UltiSnipsExpandTrigger = "<tab>"
-	let g:UltiSnipsJumpForwardTrigger = "<tab>"
-	let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"Plugin 'Sirver/ultiships' " adds common snippets integrates with YCM
+"	let g:UltiSnipsExpandTrigger = "<tab>"
+"	let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"	let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 call vundle#end()
 
