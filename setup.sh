@@ -105,6 +105,8 @@ install_mactheme() {
     wget -O launcher_bfb.png http://drive.noobslab.com/data/Mac/launcher-logo/apple/launcher_bfb.png
     mv /usr/share/unity/icons/launcher_bfb.png /usr/share/unity/icons/launcher_bfb_ubuntu.png
     mv launcher_bfb.png /usr/share/unity/icons/ 
+
+    apt-get install unity-tweak-tool compiz compizconfig-settings-manager
 }
 
 install_all() {
