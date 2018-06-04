@@ -26,7 +26,7 @@ install_fontrendering() {
 }
 
 install_java() {
-    apt install -y openjdk-9-jre-headless
+    apt install -y openjdk-9-jre-headless openjdk-9-jdk-headless
 }
 
 install_sublime() {
