@@ -87,6 +87,11 @@ install_chromedriverselenium() {
     chmod 0755 /usr/local/bin/selenium-server-standalone.jar
 }
 
+install_tmux() {
+	apt-get install -y tmux
+	cp .tmux.conf ~/.tmux.conf
+}
+
 install_mactheme() {
     # source - http://www.linuxandubuntu.com/home/macbuntu-transform-ubuntu-1604-to-mac-os-x
     add-apt-repository -y ppa:noobslab/macbuntu
@@ -117,6 +122,7 @@ install_all() {
     install_java
     install_chromedriverselenium
     install_cplus
+    install_tmux
     install_mactheme
     install_fontrendering
 }
@@ -126,6 +132,7 @@ install_minimal() {
     install_sublime
     install_python
     install_cplus
+    install_tmux
 }
 
 for i in "$@"
