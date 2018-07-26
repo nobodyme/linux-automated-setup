@@ -90,6 +90,7 @@ install_chromedriverselenium() {
 install_tmux() {
 	apt-get install -y tmux
 	cp .tmux.conf ~/.tmux.conf
+	source ~/.bashrc
 }
 
 install_mactheme() {
