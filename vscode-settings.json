@@ -1,0 +1,19 @@
+{
+	"editor.formatOnSave": true,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+	"prettier.eslintIntegration": true,
+	"prettier.useTabs": true,
+	"npm.enableScriptExplorer": true,
+	"explorer.confirmDragAndDrop": false,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"window.zoomLevel": 0,
+	"prettier.singleQuote": true,
+	"prettier.stylelintIntegration": true,
+	"workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+	"editor.rulers": [120]
+}
